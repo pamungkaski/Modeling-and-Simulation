@@ -7,7 +7,7 @@ import (
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/vg"
-	"../../../mosi"
+	"github.com/pamungkaski/Modeling-and-Simulation"
 )
 
 func main() {
@@ -20,7 +20,6 @@ func main() {
 	p.Y.Label.Text = "Y"
 
 	prbl := mosi.NewParabolic(10, 0, 0, 60, 9.8)
-	//fmt.Println(prbl.InitialAngel, prbl.InitialSpeedX, prbl.InitialSpeedY)
 	// A parabolic function
 	quad := plotter.NewFunction(func(x float64) float64 {
 		//fmt.Println(x)
@@ -28,7 +27,6 @@ func main() {
 		return prbl.PositionYatT(t)
 	})
 	quad.Color = color.RGBA{B: 255, A: 255}
-
 
 	p.Add(quad)
 	// Set the axis ranges.  Unlike other data sets,
