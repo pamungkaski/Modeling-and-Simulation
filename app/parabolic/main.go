@@ -37,7 +37,7 @@ func main() {
 	p.X.Min = 0
 	p.X.Max = prbl.MaxX() * 1.1
 	p.Y.Min = 0
-	p.Y.Max = prbl.MaxY() * 2
+	p.Y.Max = prbl.MaxY() * 1.5
 
 	// Save the plot to a SVG file.
 	if err := p.Save(10*vg.Inch, 10*vg.Inch, "parabolic.svg"); err != nil {

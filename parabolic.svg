@@ -34,29 +34,23 @@
 </g>
 <text x="15.416" y="-33.759" transform="scale(1, -1)"
 	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">0.00</text>
-<text x="15.416" y="-251.35" transform="scale(1, -1)"
+<text x="15.416" y="-323.88" transform="scale(1, -1)"
 	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">2.50</text>
-<text x="15.416" y="-468.95" transform="scale(1, -1)"
+<text x="15.416" y="-614.01" transform="scale(1, -1)"
 	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">5.00</text>
-<text x="15.416" y="-686.54" transform="scale(1, -1)"
-	style="font-family:Times;font-weight:normal;font-style:normal;font-size:10px">7.50</text>
 <path d="M35.416,38.48L43.416,38.48" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M35.416,256.07L43.416,256.07" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M35.416,473.67L43.416,473.67" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M35.416,691.26L43.416,691.26" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,81.999L43.416,81.999" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,125.52L43.416,125.52" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,169.04L43.416,169.04" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M35.416,328.61L43.416,328.61" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M35.416,618.73L43.416,618.73" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,96.505L43.416,96.505" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,154.53L43.416,154.53" style="fill:none;stroke:#000000;stroke-width:0.5" />
 <path d="M39.416,212.56L43.416,212.56" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,299.59L43.416,299.59" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,343.11L43.416,343.11" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,270.58L43.416,270.58" style="fill:none;stroke:#000000;stroke-width:0.5" />
 <path d="M39.416,386.63L43.416,386.63" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,430.15L43.416,430.15" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,517.19L43.416,517.19" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,444.66L43.416,444.66" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,502.68L43.416,502.68" style="fill:none;stroke:#000000;stroke-width:0.5" />
 <path d="M39.416,560.71L43.416,560.71" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,604.22L43.416,604.22" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M39.416,647.74L43.416,647.74" style="fill:none;stroke:#000000;stroke-width:0.5" />
+<path d="M39.416,676.76L43.416,676.76" style="fill:none;stroke:#000000;stroke-width:0.5" />
 <path d="M43.416,38.48L43.416,704.58" style="fill:none;stroke:#000000;stroke-width:0.5" />
-<path d="M49.166,38.48L62.857,67.716L76.547,95.608L90.237,122.16L103.93,147.37L117.62,171.23L131.31,193.75L145,214.93L158.69,234.77L172.38,253.26L186.07,270.41L199.76,286.22L213.45,300.68L227.14,313.81L240.83,325.58L254.52,336.02L268.21,345.12L281.9,352.87L295.59,359.28L309.29,364.34L322.98,368.06L336.67,370.44L350.36,371.48L364.05,371.18L377.74,369.53L391.43,366.54L405.12,362.21L418.81,356.53L432.5,349.51L446.19,341.15L459.88,331.44L473.57,320.4L487.26,308.01L500.95,294.27L514.64,279.2L528.33,262.78L542.02,245.02L555.71,225.92L569.4,205.47L583.1,183.68L596.79,160.55L610.48,136.07L624.17,110.26L637.86,83.096L651.55,54.593L658.94,38.48" style="fill:none;stroke:#0000FF" />
+<path d="M49.166,38.48L62.857,77.461L76.547,114.65L90.237,150.05L103.93,183.66L117.62,215.48L131.31,245.51L145,273.75L158.69,300.19L172.38,324.85L186.07,347.72L199.76,368.8L213.45,388.08L227.14,405.58L240.83,421.29L254.52,435.2L268.21,447.33L281.9,457.66L295.59,466.21L309.29,472.96L322.98,477.93L336.67,481.1L350.36,482.48L364.05,482.08L377.74,479.88L391.43,475.89L405.12,470.11L418.81,462.55L432.5,453.19L446.19,442.04L459.88,429.1L473.57,414.37L487.26,397.85L500.95,379.54L514.64,359.44L528.33,337.55L542.02,313.87L555.71,288.39L569.4,261.13L583.1,232.08L596.79,201.24L610.48,168.61L624.17,134.18L637.86,97.968L651.55,59.964L658.94,38.48" style="fill:none;stroke:#0000FF" />
 </g>
 </svg>
