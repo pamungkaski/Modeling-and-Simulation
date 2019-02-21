@@ -17,5 +17,5 @@ In your terminal, run:
 go run app/parabolic/
 ```
 
-the plotting saved to `parabolic.svg`
+the plotting saved to `parabolic.svg` or `parabolic.png`
 
