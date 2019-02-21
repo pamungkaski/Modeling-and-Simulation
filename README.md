@@ -11,6 +11,8 @@ In your terminal, run:
 ```
 
 ## Parabolic
+![](https://raw.githubusercontent.com/pamungkaski/Modeling-and-Simulation/master/parabolic.png)
+
 In your terminal, run:
 
 ```
