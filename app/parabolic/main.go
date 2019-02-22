@@ -28,7 +28,24 @@ func main() {
 	})
 	quad.Color = color.RGBA{B: 255, A: 255}
 
-	p.Add(quad)
+	// An fxt
+	fxt := plotter.NewFunction(func(t float64) float64 { return prbl.PositionXatT(t) })
+	fxt.Dashes = []vg.Length{vg.Points(2), vg.Points(2)}
+	fxt.Width = vg.Points(2)
+	fxt.Color = color.RGBA{G: 255, A: 255}
+
+	// The fyt
+	fyt := plotter.NewFunction(func(t float64) float64 { return prbl.PositionYatT(t) })
+	fyt.Dashes = []vg.Length{vg.Points(4), vg.Points(5)}
+	fyt.Width = vg.Points(4)
+	fyt.Color = color.RGBA{R: 255, A: 255}
+
+	p.Add(quad, fxt, fyt)
+	p.Legend.Add("Fx(y)", quad)
+	p.Legend.Add("Fx(t)", fxt)
+	p.Legend.Add("Fy(t)", fyt)
+	p.Legend.ThumbnailWidth = 0.5 * vg.Inch
+
 	// Set the axis ranges.  Unlike other data sets,
 	// functions don't set the axis ranges automatically
 	// since functions don't necessarily have a
