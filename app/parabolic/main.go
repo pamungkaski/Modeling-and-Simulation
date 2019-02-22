@@ -62,4 +62,9 @@ func main() {
 	if err := p.Save(10*vg.Inch, 10*vg.Inch, "parabolic.png"); err != nil {
 		panic(err)
 	}
+	fmt.Println("Maximum Height : ", prbl.MaxY())
+	fmt.Println("Maximum Range : ", prbl.MaxX())
+	fmt.Println("Postion at t = 0.2: ", prbl.PositionXatT(0.2), prbl.PositionYatT(0.2))
+	fmt.Println("Postion at t = 0.3: ", prbl.PositionXatT(0.3), prbl.PositionYatT(0.3))
+	fmt.Println("How long the bullet in the air: ", prbl.TimeInAir())
 }

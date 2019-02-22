@@ -45,3 +45,7 @@ func (p *Parabolic) MaxX () float64 {
 func (p *Parabolic) MaxY () float64 {
 	return math.Pow(p.InitialSpeed*math.Sin(p.InitialAngel), 2) / (2 * p.Gravity)
 }
+
+func (p *Parabolic) TimeInAir () float64 {
+	return 2*p.InitialSpeed*math.Sin(p.InitialAngel)/p.Gravity
+}
