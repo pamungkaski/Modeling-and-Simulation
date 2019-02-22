@@ -16,8 +16,6 @@ func main() {
 		panic(err)
 	}
 	p.Title.Text = "Parabolic"
-	p.X.Label.Text = "X"
-	p.Y.Label.Text = "Y"
 
 	prbl := mosi.NewParabolic(10, 0, 0, 60, 9.8)
 	// A parabolic function
