@@ -64,7 +64,7 @@ func main() {
 	}
 	fmt.Println("Maximum Height : ", prbl.MaxY())
 	fmt.Println("Maximum Range : ", prbl.MaxX())
-	fmt.Println("Postion at t = 0.2: ", prbl.PositionXatT(0.2), prbl.PositionYatT(0.2))
-	fmt.Println("Postion at t = 0.3: ", prbl.PositionXatT(0.3), prbl.PositionYatT(0.3))
-	fmt.Println("How long the bullet in the air: ", prbl.TimeInAir())
+	fmt.Println("Postion at t = 0.2: ", "x = ", prbl.PositionXatT(0.2), "y = ", prbl.PositionYatT(0.2))
+	fmt.Println("Postion at t = 0.3: ", "x = ", prbl.PositionXatT(0.3), "y = ", prbl.PositionYatT(0.3))
+	fmt.Println("How long the bullet in the air: ", prbl.TimeInAir(), "s")
 }

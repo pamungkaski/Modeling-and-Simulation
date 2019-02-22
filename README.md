@@ -23,11 +23,11 @@ Maximum Height :  3.826530612244897
 
 Maximum Range :  8.83699391616774
 
-Postion at t = 0.2:  1.0000000000000002 1.536050807568877
+Postion at t = 0.2:  x=1.0000000000000002 y=1.536050807568877
 
-Postion at t = 0.3:  1.5000000000000002 2.1570762113533157
+Postion at t = 0.3:  x=1.5000000000000002 y=2.1570762113533157
 
-How long the bullet in the air:  1.767398783233548
+How long the bullet in the air:  1.767398783233548s
 
 
 the plotting saved to `parabolic.svg` or `parabolic.png`
