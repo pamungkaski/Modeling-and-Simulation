@@ -17,7 +17,7 @@ func main() {
 	}
 	p.Title.Text = "Parabolic"
 
-	prbl := mosi.NewParabolic(20, 0, 0, 30, 9.8, -5)
+	prbl := mosi.NewParabolic(50, 0, 0, 60, 9.8, -15)
 	pts := plotter.XYs{}
 	minus := 0
 	maxX := 0.0
@@ -49,7 +49,11 @@ func main() {
 	// since functions don't necessarily have a
 	// finite range of x and y values.
 	fmt.Println(prbl.MaxX(), prbl.MaxY())
-	p.X.Min = maxX * -1.5
+	if pts[pts.Len() - 1].X < 0 {
+		p.X.Min = pts[pts.Len() - 1].X
+	} else {
+		p.X.Min = 0
+	}
 	p.X.Max = maxX * 1.5
 	p.Y.Min = 0
 	p.Y.Max = maxY * 2

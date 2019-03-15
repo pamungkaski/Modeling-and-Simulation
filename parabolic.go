@@ -38,7 +38,6 @@ func (p *Parabolic)PositionYatT(T float64) float64 {
 
 
 // ini sampe bawah gk berguna sih
-
 func (p *Parabolic)TatPositionX(X float64) float64 {
 	return X / p.InitialSpeedX
 }
