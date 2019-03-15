@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"image/color"
-
 	"gonum.org/v1/plot"
 	"gonum.org/v1/plot/plotter"
 	"gonum.org/v1/plot/vg"
 	"github.com/pamungkaski/Modeling-and-Simulation"
+	"gonum.org/v1/plot/plotutil"
+	"log"
 )
 
 func main() {
@@ -17,42 +17,42 @@ func main() {
 	}
 	p.Title.Text = "Parabolic"
 
-	prbl := mosi.NewParabolic(10, 0, 0, 60, 9.8)
-	// A parabolic function
-	quad := plotter.NewFunction(func(x float64) float64 {
-		//fmt.Println(x)
-		t := prbl.TatPositionX(x)
-		return prbl.PositionYatT(t)
-	})
-	quad.Color = color.RGBA{B: 255, A: 255}
-
-	// An fxt
-	fxt := plotter.NewFunction(func(t float64) float64 { return prbl.PositionXatT(t) })
-	fxt.Dashes = []vg.Length{vg.Points(2), vg.Points(2)}
-	fxt.Width = vg.Points(2)
-	fxt.Color = color.RGBA{G: 255, A: 255}
-
-	// The fyt
-	fyt := plotter.NewFunction(func(t float64) float64 { return prbl.PositionYatT(t) })
-	fyt.Dashes = []vg.Length{vg.Points(4), vg.Points(5)}
-	fyt.Width = vg.Points(4)
-	fyt.Color = color.RGBA{R: 255, A: 255}
-
-	p.Add(quad, fxt, fyt)
-	p.Legend.Add("Fx(y)", quad)
-	p.Legend.Add("Fx(t)", fxt)
-	p.Legend.Add("Fy(t)", fyt)
-	p.Legend.ThumbnailWidth = 0.5 * vg.Inch
+	prbl := mosi.NewParabolic(20, 0, 0, 30, 9.8, -5)
+	pts := plotter.XYs{}
+	minus := 0
+	maxX := 0.0
+	maxY := 0.0
+	for i := 0; minus < 2 ; i++{
+		pets := plotter.XY{}
+		pets.X =  prbl.PositionXatT(float64(i)/float64(10))
+		pets.Y =  prbl.PositionYatT(float64(i)/float64(10))
+		fmt.Println(pets, float64(i)/float64(10))
+		if maxX < pets.X {
+			maxX = pets.X
+		}
+		if maxY < pets.Y {
+			maxY = pets.Y
+		}
+		if pets.Y < 0 {
+			minus++
+			pts = append(pts, pets)
+		} else {
+			pts = append(pts, pets)
+		}
+	}
+	 if err := plotutil.AddLinePoints(p, pts); err != nil {
+		log.Fatal(err.Error())
+	 }
 
 	// Set the axis ranges.  Unlike other data sets,
 	// functions don't set the axis ranges automatically
 	// since functions don't necessarily have a
 	// finite range of x and y values.
 	fmt.Println(prbl.MaxX(), prbl.MaxY())
-	p.X.Min = 0
-	p.X.Max = prbl.MaxX() * 1.1
+	p.X.Min = maxX * -1.5
+	p.X.Max = maxX * 1.5
 	p.Y.Min = 0
-	p.Y.Max = prbl.MaxY() * 1.5
+	p.Y.Max = maxY * 2
 
 	// Save the plot to a SVG file.
 	if err := p.Save(10*vg.Inch, 10*vg.Inch, "parabolic.svg"); err != nil {
@@ -62,6 +62,8 @@ func main() {
 	if err := p.Save(10*vg.Inch, 10*vg.Inch, "parabolic.png"); err != nil {
 		panic(err)
 	}
+
+	// ini kebawah juga gk guna
 	fmt.Println("Maximum Height : ", prbl.MaxY())
 	fmt.Println("Maximum Range : ", prbl.MaxX())
 	fmt.Println("Postion at t = 0.2: ", "x = ", prbl.PositionXatT(0.2), "y = ", prbl.PositionYatT(0.2))

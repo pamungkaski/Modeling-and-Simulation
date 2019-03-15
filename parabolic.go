@@ -12,9 +12,10 @@ type Parabolic struct {
 	InitialY float64
 	InitialAngel float64
 	Gravity float64
+	WindAcceleration float64
 }
 
-func NewParabolic(speed, X, Y, angle, gravity float64) Parabolic {
+func NewParabolic(speed, X, Y, angle, gravity, wind float64) Parabolic {
 	return Parabolic{
 		InitialSpeed: speed,
 		InitialAngel: angle*math.Pi/180,
@@ -23,16 +24,20 @@ func NewParabolic(speed, X, Y, angle, gravity float64) Parabolic {
 		InitialY: Y,
 		InitialSpeedX: math.Abs(speed * math.Cos(angle*math.Pi/180)),
 		InitialSpeedY: math.Abs(speed * math.Sin(angle*math.Pi/180)),
+		WindAcceleration: wind,
 	}
 }
 
 func (p *Parabolic)PositionXatT(T float64) float64 {
-	return p.InitialSpeedX * T
+	return (p.InitialSpeedX * T) + ((p.WindAcceleration * math.Pow(T, 2)) / 2)
 }
 
 func (p *Parabolic)PositionYatT(T float64) float64 {
 	return (p.InitialSpeedY * T) - ((p.Gravity * math.Pow(T, 2)) / 2)
 }
+
+
+// ini sampe bawah gk berguna sih
 
 func (p *Parabolic)TatPositionX(X float64) float64 {
 	return X / p.InitialSpeedX
