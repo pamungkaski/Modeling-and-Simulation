@@ -15,6 +15,7 @@ func main() {
 	// Finish is the plane dimension to move
 	randomwalk := mosi.NewRandomWalk([]float64{0.24, 0.41, 0.51, 0.53, 0.56, 0.66, 0.81, 1.00}, 20)
 	fmt.Println(randomwalk.Moves)
+	fmt.Println(randomwalk.Route)
 	p, err := plot.New()
 	if err != nil {
 		panic(err)
@@ -24,6 +25,8 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
+	p.X.Max = 20
+	p.Y.Max = 20
 	// Save the plot to a SVG file.
 	if err := p.Save(10*vg.Inch, 10*vg.Inch, "random_walk.svg"); err != nil {
 		panic(err)

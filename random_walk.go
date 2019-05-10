@@ -4,6 +4,7 @@ import (
 	"time"
 	"math/rand"
 	"gonum.org/v1/plot/plotter"
+	"fmt"
 )
 
 type RandomWalk struct {
@@ -29,9 +30,11 @@ func NewRandomWalk (percentage []float64, finish int) (RandomWalk) {
 		Finish: finish,
 	}
 
-	for r.CurrentStateX != r.Finish && r.CurrentStateY != r.Finish  {
+	for !(r.CurrentStateX == r.Finish && r.CurrentStateY == r.Finish) {
+		fmt.Println(r.CurrentStateX, r.CurrentStateY)
 		r.NextStep()
 	}
+	fmt.Println("here")
 	return r
 }
 
@@ -45,6 +48,8 @@ func (r *RandomWalk) NextStep () {
 	r1 := rand.New(source)
 
 	for !moves {
+		nextX = r.CurrentStateX
+		nextY = r.CurrentStateY
 		randomNumber := r1.Float64()
 		for i, perc := range r.DirectionPercentage {
 			if perc > randomNumber {
@@ -54,6 +59,7 @@ func (r *RandomWalk) NextStep () {
 				break
 			}
 		}
+		fmt.Println(nextX, nextY)
 		if nextX >= 0 && nextX <= r.Finish && nextY >= 0 && nextY <= r.Finish {
 			moves = true
 		}
