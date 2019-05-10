@@ -3,6 +3,7 @@
 This is my personal repository for Modeling and Simulation course task.
 
 ## Installment
+Install Golang properly
 In your terminal, run:
 
 ```
@@ -10,13 +11,29 @@ In your terminal, run:
 ~ go mod vecndor
 ```
 
+## Random Walk
+![](https://raw.githubusercontent.com/pamungkaski/Modeling-and-Simulation/master/random_walk.png)
+
+In your terminal, run:
+
+```
+go run app/rng/main.go
+```
+
+The Parameters that can be edited are:
+- Percentage of each move
+- Plane dimension
+
+to change it, edit `app/rng/main.go`
+
+the plotting is saved in `random_walk.png` or `random_walk.svg`
 ## Parabolic
 ![](https://raw.githubusercontent.com/pamungkaski/Modeling-and-Simulation/master/parabolic.png)
 
 In your terminal, run:
 
 ```
-go run app/parabolic/
+go run app/parabolic/main.go
 ```
 
 Maximum Height :  3.826530612244897

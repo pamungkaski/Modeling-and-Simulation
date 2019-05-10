@@ -17,7 +17,7 @@ func main() {
 	}
 	p.Title.Text = "Parabolic"
 
-	prbl := mosi.NewParabolic(50, 0, 0, 60, 9.8, -15)
+	prbl := mosi.NewParabolic(140, 0, 0, 30, 9.8, 0)
 	pts := plotter.XYs{}
 	minus := 0
 	maxX := 0.0
