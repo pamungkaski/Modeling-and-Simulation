@@ -8,7 +8,7 @@ In your terminal, run:
 
 ```
 ~ go get github.com/pamungkaski/Modeling-and-Simulation
-~ go mod vecndor
+~ go mod vendor
 ```
 
 ## Random Walk
